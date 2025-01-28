@@ -1,0 +1,11 @@
+targets:
+  $default:
+    builders:
+      mockito|mockBuilder:
+        generate_for:
+          - test/**.dart
+        options:
+          # Options configure how the source code is generated for every target.
+          # Supported options can be found in the builder documentation.
+          build_extensions:
+            '^test/{{}}.dart': 'test/{{}}.mocks.dart' 
